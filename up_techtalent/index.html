@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký Tuyển dụng - TechTalent</title>
+</head>
+<body>
+
+    <form action="/submit-application" method="POST" enctype="multipart/form-data">
+        <h1>HỆ THỐNG TUYỂN DỤNG TECHTALENT</h1>
+        
+        <fieldset>
+            <legend>Thông tin cá nhân</legend>
+            
+            <p>
+                <label for="fullname">Họ và tên:</label><br>
+                <input type="text" id="fullname" name="fullname" placeholder="Nguyễn Văn A" required>
+            </p>
+
+            <p>
+                <label>Giới tính:</label><br>
+                <input type="radio" id="male" name="gender" value="nam" required>
+                <label for="male">Nam</label>
+                <input type="radio" id="female" name="gender" value="nu">
+                <label for="female">Nữ</label>
+            </p>
+
+            <p>
+                <label for="dob">Ngày sinh:</label><br>
+                <input type="date" id="dob" name="dob" required>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Tài khoản & Liên hệ</legend>
+            
+            <p>
+                <label for="user-email">Email ứng tuyển:</label><br>
+                <input type="email" id="user-email" name="email" placeholder="email@vi-du.com" required>
+            </p>
+
+            <p>
+                <label for="user-pw">Mật khẩu hệ thống:</label><br>
+                <input type="password" id="user-pw" name="password" minlength="8" required>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Hồ sơ chuyên môn</legend>
+
+            <p>
+                <label for="position">Vị trí ứng tuyển:</label><br>
+                <select id="position" name="position" required>
+                    <option value="">--Vui lòng chọn vị trí--</option>
+                    <option value="frontend">Frontend Intern</option>
+                    <option value="backend">Backend Developer</option>
+                    <option value="design">UI/UX Designer</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="cv-file">Nộp hồ sơ CV (Chỉ nhận PDF):</label><br>
+                <input type="file" id="cv-file" name="cv" accept=".pdf" required>
+            </p>
+        </fieldset>
+
+        <p>
+            <button type="submit">GỬI HỒ SƠ ỨNG TUYỂN</button>
+            <button type="reset">XÓA NHẬP LẠI</button>
+        </p>
+    </form>
+
+</body>
+</html>
