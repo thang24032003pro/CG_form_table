@@ -1,0 +1,63 @@
+1. Thông tin chung Dự án:
+Web Form Tuyển dụng TechTalent (Giai đoạn 1).
+
+Môi trường test:
+- Trình duyệt Chrome / Microsoft Edge.
+
+Mục tiêu:
+- Kiểm tra khả năng chặn dữ liệu rác bằng HTML5 Validation (không dùng Javascript).
+
+2. Kịch bản kiểm thử (Test Cases)
+
+STT | Kịch bản (Scenario) | Hành động của người dùng | Kết quả mong đợi (Expected) | Kết quả thực tế (Actual) | Trạng thái
+
+01 | Để trống trường bắt buộc
+- Để trống ô "Họ tên" và bấm Gửi.
+- Trình duyệt hiển thị thông báo:
+  "Please fill out this field".
+- Đúng như mong đợi.
+- Pass
+
+02 | Sai định dạng Email
+- Nhập "tuan_intern_tech" (thiếu @).
+- Trình duyệt báo lỗi:
+  "Please include an '@' in the email address".
+- Hiện cảnh báo đỏ.
+- Pass
+
+03 | Mật khẩu quá ngắn
+- Nhập mật khẩu "123".
+- Trình duyệt báo lỗi yêu cầu tối thiểu 8 ký tự (do minlength="8").
+- Chặn gửi form thành công.
+- Pass
+
+04 | Chọn giới tính
+- Click chọn "Nam", sau đó chọn "Nữ".
+- Chỉ một ô được chọn tại một thời điểm.
+- Hoạt động chính xác.
+- Pass
+
+05 | Sai định dạng File
+- Cố tình chọn một file ảnh (.png).
+- File bị mờ đi hoặc trình duyệt báo lỗi không chấp nhận.
+- Chỉ cho phép chọn .pdf.
+- Pass
+
+3. Hình ảnh minh họa (Mô tả)
+- Trong file .txt bạn không chèn ảnh được, nên bạn hãy mô tả lại các "Tooltip" hiện ra hoặc đính kèm ảnh chụp màn hình riêng lẻ.
+
+Ảnh 1 (validation_fullname.png):
+- Hiện thông báo nhắc nhở khi bỏ trống tên.
+
+Ảnh 2 (validation_email.png):
+- Hiện thông báo lỗi khi email thiếu ký tự @.
+
+Ảnh 3 (date_picker.png):
+- Giao diện lịch hiện ra khi click vào ô Ngày sinh, đảm bảo ứng viên không gõ sai định dạng ngày tháng.
+
+4. Kết luận
+- Form đã khắc phục hoàn toàn các lỗi từ bản Legacy Code của HR.
+- Đảm bảo dữ liệu gửi lên Server là dữ liệu "sạch" và đúng định dạng cơ bản.
+- Trải nghiệm người dùng (UX) tốt nhờ liên kết <label>:
+  Người dùng có thể chạm vào chữ để kích hoạt ô nhập liệu
+  (đặc biệt hữu ích trên thiết bị di động).
