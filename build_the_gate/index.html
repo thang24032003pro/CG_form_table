@@ -1,0 +1,33 @@
+<form action="" method="GET">
+    <fieldset>
+        <legend>Đăng ký Chiến binh săn lỗi</legend>
+
+        <p>
+            <label for="full-name">Họ và tên:</label><br>
+            <input type="text" id="full-name" name="fullname" required>
+        </p>
+
+        <p>
+            <label for="user-email">Email liên hệ:</label><br>
+            <input type="email" id="user-email" name="email" required>
+        </p>
+
+        <p>
+            <label for="user-pw">Mật khẩu:</label><br>
+            <input type="password" id="user-pw" name="password" minlength="8" required>
+        </p>
+
+        <p>
+            Trình độ của bạn: <br>
+            <input type="radio" id="lv1" name="level" value="newbie">
+            <label for="lv1">Mới tập chơi</label>
+            
+            <input type="radio" id="lv2" name="level" value="pro">
+            <label for="lv2">Chuyên nghiệp</label>
+        </p>
+
+        <p>
+            <button type="submit">Đăng ký ngay</button>
+        </p>
+    </fieldset>
+</form>

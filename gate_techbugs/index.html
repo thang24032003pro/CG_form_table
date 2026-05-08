@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký Chiến binh săn lỗi - TechBugs</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; }
+        form { max-width: 500px; border: 1px solid #ccc; padding: 20px; border-radius: 8px; }
+        .form-group { margin-bottom: 15px; }
+        label { font-weight: bold; cursor: pointer; }
+        input[type="text"], input[type="email"], input[type="password"], textarea {
+            width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box;
+        }
+        .radio-group, .checkbox-group { margin-top: 5px; }
+        button { background-color: #007bff; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 4px; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <h2>Đăng ký tham gia săn lỗi</h2>
+
+    <form action="" method="GET">
+        
+        <div class="form-group">
+            <label for="fullname">Họ và tên:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Nhập tên đầy đủ" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email liên hệ:</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Mật khẩu hệ thống:</label>
+            <input type="password" id="password" name="password" minlength="8" required>
+        </div>
+
+        <div class="form-group">
+            <label>Trình độ của bạn:</label>
+            <div class="radio-group">
+                <input type="radio" id="newbie" name="level" value="Newbie" required>
+                <label for="newbie">Mới tập chơi</label>
+                
+                <input type="radio" id="pro" name="level" value="Pro">
+                <label for="pro">Chuyên nghiệp</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Kinh nghiệm nền tảng:</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="web" name="platform" value="Web">
+                <label for="web">Web</label>
+                
+                <input type="checkbox" id="mobile" name="platform" value="Mobile">
+                <label for="mobile">Mobile App</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="reason">Lý do tham gia:</label>
+            <textarea id="reason" name="reason" rows="4" placeholder="Chia sẻ động lực của bạn..."></textarea>
+        </div>
+
+        <button type="submit">Đăng ký ngay</button>
+    </form>
+
+</body>
+</html>
