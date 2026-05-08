@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài thực hành Table & CSS - Bàn cờ và Lịch</title>
+    <style>
+        /* CSS cho Phần 1: Bàn cờ vua */
+        .chessboard {
+            border-collapse: collapse;
+            border: 5px solid #333;
+            margin-bottom: 50px;
+        }
+        .chessboard td {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+        /* Tạo màu ô đen trắng xen kẽ */
+        .chessboard tr:nth-child(odd) td:nth-child(even),
+        .chessboard tr:nth-child(even) td:nth-child(odd) {
+            background-color: #000;
+        }
+        .chessboard tr:nth-child(odd) td:nth-child(odd),
+        .chessboard tr:nth-child(even) td:nth-child(even) {
+            background-color: #fff;
+        }
+
+        /* CSS cho Phần 2: Lịch tháng */
+        .calendar {
+            border-collapse: collapse;
+            width: 350px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .calendar th, .calendar td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .calendar th {
+            background-color: #ff0000;
+            color: white;
+        }
+        .calendar .sunday {
+            color: red;
+            font-weight: bold;
+        }
+        .calendar .header-month {
+            background-color: #0066cc;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Phần 1: Bàn cờ vua</h2>
+    <table class="chessboard">
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+    </table>
+
+    <hr>
+
+    <h2>Phần 2: Lịch tháng</h2>
+    <table class="calendar">
+        <thead>
+            <tr>
+                <th colspan="7" class="header-month">Tháng 10 - October</th>
+            </tr>
+            <tr>
+                <th class="sunday">C.Nhật</th>
+                <th>T.Hai</th>
+                <th>T.Ba</th>
+                <th>T.Tư</th>
+                <th>T.Năm</th>
+                <th>T.Sáu</th>
+                <th>T.Bảy</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="sunday"></td><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td>
+            </tr>
+            <tr>
+                <td class="sunday">5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td>
+            </tr>
+            <tr>
+                <td class="sunday">12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td>
+            </tr>
+            <tr>
+                <td class="sunday">19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td>
+            </tr>
+            <tr>
+                <td class="sunday">26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
