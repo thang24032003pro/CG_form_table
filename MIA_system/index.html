@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Hệ thống Quản lý Đặc vụ M.I.A</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #d32f2f; /* Màu đỏ MI6 đặc trưng */
+        }
+        .group-header {
+            font-weight: bold;
+            background-color: #fafafa;
+        }
+        .footer-row {
+            background-color: #eee;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">DANH SÁCH ĐẶC VỤ CHIẾN LƯỢC M.I.A</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Khu vực hoạt động</th>
+                <th>Mã Đặc vụ</th>
+                <th>Tên Đặc vụ</th>
+                <th>Cấp bậc</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2" class="group-header">Châu Á</td>
+                <td>007</td>
+                <td>James Bond</td>
+                <td>Senior</td>
+            </tr>
+            <tr>
+                <td>099</td>
+                <td>John Doe</td>
+                <td>Trainee</td>
+            </tr>
+
+            <tr>
+                <td rowspan="2" class="group-header">Châu Âu</td>
+                <td>006</td>
+                <td>Alec Trevelyan</td>
+                <td>Senior</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Silva</td>
+                <td>Rogue</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="footer-row">
+                <td colspan="4">Tổng số lượng đặc vụ: 04</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
