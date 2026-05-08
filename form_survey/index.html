@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Satisfaction Survey</title>
+</head>
+<body>
+
+    <header>
+        <h1>Customer Satisfaction Survey</h1>
+        <p>Xin vui lòng dành ít phút để phản hồi về trải nghiệm của bạn.</p>
+    </header>
+
+    <form action="#" method="POST">
+        
+        <fieldset>
+            <legend>Thông tin khách hàng</legend>
+            <p>
+                <label for="full-name">Họ và tên:</label><br>
+                <input type="text" id="full-name" name="full_name" required>
+            </p>
+            <p>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Đánh giá dịch vụ</legend>
+            <p>Bạn biết đến chúng tôi từ đâu?</p>
+            <select name="source" id="source">
+                <option value="social">Mạng xã hội</option>
+                <option value="friend">Người thân giới thiệu</option>
+                <option value="ads">Quảng cáo</option>
+                <option value="other">Khác</option>
+            </select>
+
+            <p>Mức độ hài lòng của bạn:</p>
+            <label><input type="radio" name="satisfaction" value="very-good"> Rất tốt</label><br>
+            <label><input type="radio" name="satisfaction" value="good"> Tốt</label><br>
+            <label><input type="radio" name="satisfaction" value="normal"> Bình thường</label><br>
+            <label><input type="radio" name="satisfaction" value="bad"> Tệ</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Ý kiến đóng góp</legend>
+            <p>
+                <label for="comments">Điều gì chúng tôi có thể cải thiện?</label><br>
+                <textarea id="comments" name="comments" rows="5" cols="40"></textarea>
+            </p>
+        </fieldset>
+
+        <br>
+        <button type="submit">Gửi khảo sát</button>
+    </form>
+
+</body>
+</html>
