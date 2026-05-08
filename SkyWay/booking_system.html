@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Hệ thống Đặt vé SkyWay</title>
+</head>
+<body>
+
+    <h1>HỆ THỐNG ĐẶT VÉ MÁY BAY SKYWAY</h1>
+
+    <form action="/api/booking" method="POST">
+        <fieldset>
+            <legend>Thông tin khách hàng</legend>
+            <p>
+                <label for="fullname">Họ và tên:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Vd: Nguyễn Văn A" required>
+            </p>
+            <p>
+                <label for="user-email">Email liên hệ:</label>
+                <input type="email" id="user-email" name="email" placeholder="example@mail.com" required>
+            </p>
+            <p>
+                <label for="user-phone">Số điện thoại:</label>
+                <input type="tel" id="user-phone" name="phone" pattern="[0-9]{10}" placeholder="09xxxxxxxx" required>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Chi tiết chuyến bay</legend>
+            <p>
+                <label for="flight-date">Ngày bay:</label>
+                <input type="date" id="flight-date" name="departure_date" required>
+            </p>
+            <p>
+                <label for="seat-class">Hạng ghế:</label>
+                <select id="seat-class" name="seat_class">
+                    <option value="economy">Phổ thông</option>
+                    <option value="business">Thương gia</option>
+                    <option value="first">Hạng nhất</option>
+                </select>
+            </p>
+        </fieldset>
+        
+        <br>
+        <button type="submit">XÁC NHẬN ĐẶT VÉ</button>
+    </form>
+
+    <br><hr><br>
+
+    <h2>LỊCH BAY HÔM NAY</h2>
+    <table border="1" cellpadding="10" cellspacing="0" style="width: 80%; text-align: center;">
+        <thead>
+            <tr style="background-color: #f2f2f2;">
+                <th>Giờ khởi hành</th>
+                <th>Mã chuyến</th>
+                <th>Hành trình</th>
+                <th>Trạng thái</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">08:00</td>
+                <td>VN123</td>
+                <td>Hà Nội - TP.HCM</td>
+                <td>Đúng giờ</td>
+            </tr>
+            <tr>
+                <td>QH789</td>
+                <td>Hà Nội - Phú Quốc</td>
+                <td>Đúng giờ</td>
+            </tr>
+            <tr>
+                <td>09:30</td>
+                <td colspan="3" style="color: red; font-weight: bold;">
+                    CHUYẾN VJ456 (Hà Nội - Đà Nẵng): ĐÃ HỦY DO THỜI TIẾT
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">13:00</td>
+                <td>VN555</td>
+                <td>Hà Nội - Tokyo</td>
+                <td>Đúng giờ</td>
+            </tr>
+            <tr>
+                <td>SQ111</td>
+                <td>Hà Nội - Singapore</td>
+                <td>Đúng giờ</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Cập nhật lúc: 15:30 ngày 08/05/2026</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
